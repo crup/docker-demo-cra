@@ -1,0 +1,20 @@
+Create a react app:
+npx create-react-app docker-app
+
+docker build -t docker-app -f Dockerfile.dev .
+
+Run docker image
+docker run -i -p 3000:3000 docker-app
+
+docker exec -it 6 /bin/as
+
+Delete all docker proceses
+docker rm -f $(docker ps -qa --no-trunc)
+
+Docker run with volume mount
+docker run -i -p 3000:3000 -v /Users/rajenderjoshi/demo/docker-app:/usr/src/app docker-app
+
+
+docker images -a
+
+docker build -t docker-app-prod -f Dockerfile .
